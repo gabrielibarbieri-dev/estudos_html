@@ -1,0 +1,76 @@
+body {
+    background-image: url("../imagens/japao.jpg");
+    /* como já estamos em uma página, usamos o ../ para sair dessa pasta e poder entrar em outra (como nessa entramos em imagens) */
+    background-repeat: no-repeat;
+    /* usado para não repetir a imagem */
+    background-position: top;
+    /* é para ficar em cima, não deixar espaço nenhum nas bordas */
+    background-size: cover;
+    /* usado para deixar a imagem na tela inteira, é como uma capa para preencher toda a tela*/
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+}
+
+h1,h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    color: lightcoral;
+    text-shadow: black 2px 2px;
+}
+
+#contato {
+    text-align: left;
+    font-size: 30px;
+    border-style: solid;
+    border-color: lightyellow;
+    border-width: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+#tabela {
+    border-style: solid;
+    background-color: maroon;
+    border-color: lightyellow;
+    font-size: 24px;
+    color: white;
+}
+
+th {
+    border-style: solid;
+    background-color: maroon;
+    border-color: lightyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+td {
+    border-style: solid;
+    background-color: lightgray;
+    border-color: lightyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+#botao {
+    color: red;
+    text-shadow: black 1px 1px;
+    text-align: right;
+}
+
+hr {
+    border: 10px solid lightcoral;
+}
+
+footer {
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}
