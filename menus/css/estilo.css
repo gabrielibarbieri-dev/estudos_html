@@ -8,9 +8,9 @@ h1 {
     font-family: sans-serif;
     text-align: center;
     border-radius: 10px;
-    /* border radius é para o ARREDONDAMENTO DE BORDA os cantinhos ficam redondinhos*/
+    /* border-radius: arredonda os cantos da borda (deixa os cantinhos redondinhos) */
     padding: 10px;
-    /* é a margem interna, os quadradinhos internos */
+    /* padding: margem interna do conteúdo (aumenta a área “dentro” da borda) */
 }
 
 h4 {
@@ -18,6 +18,7 @@ h4 {
     color: white;
     background-color: rgb(80, 70, 70);
     border-style: solid;
+    border-color: red;
     border-width: 2px;
     font-family: sans-serif;
     text-align: center;
@@ -26,18 +27,87 @@ h4 {
 }
 
 /* Menu horizontal */
-
 #menu ul {
     padding: 10px;
     margin: 0;
     background-color: #2b1010;
     list-style: none;
+    display: flex;         /* coloca os <li> lado a lado (layout horizontal) */
+    gap: 20px;             /* espaço entre os itens do menu */
+    align-items: center;   /* alinha verticalmente os itens dentro do UL */
 }
 
-/* -todos os ul(lista ordenada) que está dentro do MENU, vão ser modificados, pode ocorrer o risco de ter outros menus dentro de um meu, por isso especificar
--não tenho DUAS TAGS, por isso não colocamos virgula, pois não é um agrupamento de propriedades
--GRUPAMENTO DE PROPRIEDADES É TIPO TAG COM TAG, agr exemplo se for um id e uma tag não precisa de virgula */
+/* 
+- Este seletor atinge o <ul> que está dentro do elemento com id="menu".
+- Não é “agrupamento” (que usaria vírgula), é um seletor descendente: #menu -> ul.
+- Use vírgula somente quando quiser aplicar as MESMAS regras a vários seletores distintos.
+*/
 
 #menu ul li {
-    display: inline;
+    /* Os <li> já ficam na horizontal por causa do flex no UL.
+       Mantemos sem display aqui para evitar conflito com o flex. */
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li a {
+    padding: 10px 30px;
+    text-decoration: none;          /* remove o sublinhado padrão do link */
+    background-color: #ededed;
+    display: inline-block;
+    /* inline-block: transforma o <a> em “caixinha” (aceita padding/borda/largura),
+       e, dentro do flex, permanece lado a lado com os outros itens */
+    border-bottom: 3px solid #ededed;
+    /* border-bottom: isto é BORDA inferior (não é margem).
+       Truque comum: trocar a cor no :hover para parecer uma “aba” ativa */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 0 10px;                 /* margem lateral moderada (o gap já cuida do espaço principal) */
+    color: #333;                     /* cor do texto do link */
+}
+
+/* Efeito visual de “aba” ao passar o mouse */
+#menu ul li a:hover {
+    background-color: #b5d45d;
+    color: #2d19e2;
+    border-bottom: 3px solid #EA0000;
+}
+
+/*menu vertical*/
+/*selecionar o ul que estiver dentro do elemento id menuv*/
+#menuv ul {
+    list-style-type: none;
+    /*remove as bolinhas/ marcadores padrão da lista*/
+    margin-left: 0;
+    /*zera a margem esquerda*/
+    padding: 20px 50px;
+     /*espaço interno do ul: 20px em cima/ baixo e 50px nas laterais*/
+    width: 150px;
+    /*largura fixa da area do menu*/
+    background-color: #2b1010;
+
+}
+
+#menuv ul li a {
+    display: block;
+    /*faz cada link virar um bloco(ocupa a linha inteira do menu*/
+    /*isso que deixa os itens empilhados verticalmente e toda linha clicavel*/
+    padding: 10px 40px;
+    background-color: #ededed;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 3px solid #ededed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 2px 0px;
+
+}
+
+#menuv ul li a:hover {
+    background-color: #b5d45d;
+    color: #2d19e2;
+    border-bottom: 3px solid #EA0000;
 }
