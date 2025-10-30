@@ -16,3 +16,48 @@ h4{
     border-radius: 5px;
     padding: 5px;
 }
+/*estilizamos apenas nosso h4 */
+
+.menu {
+    width:100%;
+    background-color: #2b1010;
+    height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*estilizamos a nav da classe menu*/
+
+.menu ul {
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li{
+    width: 200px;
+    float: left;
+}
+
+ .menu a /*esse a é como uma ancora, pois puxa o link*/ { 
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #2b1010;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+ }
+/*vamos mecher agora para só aparecer nossa lista no momento em que colocamos o mouse em cima*/
+ .menu ul ul {
+    position: absolute;
+    visibility: hidden;
+    /* aqui o submenu começa escondido HIDDEN esconde, oculpa mais memória, visibilidade baixa*/
+ }
+
+ .menu ul li:hover ul {
+    visibility: visible;
+ }
+
+ .menu a:hover {
+    background-color: #862175;
+    color: yellowgreen;
+ }
